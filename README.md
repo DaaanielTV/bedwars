@@ -1,11 +1,11 @@
 ![Logo](./.github/assets/logo_open_source.png)
 
 
+Build on top of Bedwars 1058
+
+
 As from November 1st 2021 BedWars1058 by Andrei Dascălu becomes open source under GNU GPL 3.0 license. If you are a developer I would really appreciate if you'd come with pull requests instead of making hundreds of forks. Let's make updates available for everyone!
 
-[![Discord](https://discordapp.com/api/guilds/201345265821679617/widget.png?style=shield)](https://discord.gg/XdJfN2X)
-
-[![Crowdin](https://support.crowdin.com/assets/badges/localization-at-white-rounded-bordered@1x.svg)](https://crowdin.com/project/bedwars1058)
 
 # Description
 BedWars is a mini-game where you have to defend your bed and destroy the others.  
