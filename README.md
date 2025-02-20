@@ -136,3 +136,74 @@ If you are not a programmer you can help answering people in the [Issues](https:
 - [Commons IO](https://mvnrepository.com/artifact/commons-io/commons-io)
 - [HikariCP](https://mvnrepository.com/artifact/com.zaxxer/HikariCP)
 - [SLF4J](http://www.slf4j.org/)
+
+
+new features:
+
+package com.andrei1058.bedwars;
+
+import org.bukkit.Bukkit;
+import org.bukkit.boss.BossBar;
+import org.bukkit.boss.BarColor;
+import org.bukkit.boss.BarStyle;
+import org.bukkit.entity.Player;
+import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.scheduler.BukkitRunnable;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.UUID;
+
+public class ScoreboardBossBarUpdater {
+
+    private static BossBar bossBar;
+    private static final Map<UUID, Boolean> playersViewing = new HashMap<>();
+
+    /**
+     * Call this method to initialize and start boss bar updates.
+     * It will update the boss bar title every second with the current top player info.
+     *
+     * @param plugin your plugin instance.
+     */
+    public static void init(JavaPlugin plugin) {
+        bossBar = Bukkit.createBossBar("Top Player: N/A", BarColor.BLUE, BarStyle.SOLID);
+        
+        new BukkitRunnable() {
+            @Override
+            public void run() {
+                // Retrieve updated top player info from your scoreboard mechanism
+                String topPlayerInfo = getTopPlayerInfo();
+                bossBar.setTitle("Top Player: " + topPlayerInfo);
+
+                // Ensure every online player can see the boss bar
+                for (Player player : Bukkit.getOnlinePlayers()) {
+                    if (!bossBar.getPlayers().contains(player)) {
+                        bossBar.addPlayer(player);
+                        playersViewing.put(player.getUniqueId(), true);
+                    }
+                }
+            }
+        }.runTaskTimer(plugin, 0L, 20L); // update every second (20 ticks)
+    }
+
+    /**
+     * Stub method to get current top player information.
+     * Replace this with logic that returns your dynamic top player value.
+     *
+     * @return a formatted string representing the top player and their stats.
+     */
+    private static String getTopPlayerInfo() {
+        // TODO: Replace with your scoreboard/logic to retrieve the top player info.
+        return "PlayerXYZ - 100 Kills";
+    }
+
+    /**
+     * Use this to remove the boss bar from a player (for example, when they disconnect).
+     *
+     * @param player the player to remove from the boss bar.
+     */
+    public static void removeBossBarForPlayer(Player player) {
+        bossBar.removePlayer(player);
+        playersViewing.remove(player.getUniqueId());
+    }
+}
