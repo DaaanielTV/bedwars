@@ -58,6 +58,7 @@
             <id>jitpack.io</id>
             <url>https://jitpack.io</url>
         </repository>
+        <!-- other repositories -->
         <repository>
             <id>spigot-repo</id>
             <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
@@ -93,6 +94,11 @@
                     <artifactId>bukkit</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.github.andrei1058</groupId>
+            <artifactId>SidebarLib</artifactId>
+            <version>v1.0.0</version>
         </dependency>
     </dependencies>
 </project>
