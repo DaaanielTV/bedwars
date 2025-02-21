@@ -1,6 +1,4 @@
-package com.andrei1058.bedwars.api.arena.stats;
 
-import com.andrei1058.bedwars.api.language.Language;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 

@@ -18,9 +18,6 @@
  * Contact e-mail: andrew.dascalu@gmail.com
  */
 
-package com.andrei1058.bedwars.api.command;
-
-import com.andrei1058.bedwars.api.BedWars;
 import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.ConsoleCommandSender;

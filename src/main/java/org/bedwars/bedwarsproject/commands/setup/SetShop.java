@@ -1,35 +1,6 @@
-/*
- * BedWars1058 - A bed wars mini-game.
- * Copyright (C) 2021 Andrei Dascălu
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <https://www.gnu.org/licenses/>.
- *
- * Contact e-mail: andrew.dascalu@gmail.com
- */
 
-package com.andrei1058.bedwars.commands.bedwars.subcmds.sensitive.setup;
+package org.bedwars.bedwarsproject.commands.setup;
 
-import com.andrei1058.bedwars.api.BedWars;
-import com.andrei1058.bedwars.api.arena.team.TeamColor;
-import com.andrei1058.bedwars.api.command.ParentCommand;
-import com.andrei1058.bedwars.api.command.SubCommand;
-import com.andrei1058.bedwars.api.configuration.ConfigPath;
-import com.andrei1058.bedwars.api.server.SetupType;
-import com.andrei1058.bedwars.arena.Misc;
-import com.andrei1058.bedwars.arena.SetupSession;
-import com.andrei1058.bedwars.configuration.Permissions;
-import com.andrei1058.bedwars.configuration.Sounds;
 import net.md_5.bungee.api.chat.ClickEvent;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -37,13 +8,12 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.entity.Player;
 
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-import static com.andrei1058.bedwars.BedWars.mainCmd;
-import static com.andrei1058.bedwars.commands.Misc.createArmorStand;
-import static com.andrei1058.bedwars.commands.Misc.removeArmorStand;
+
 
 public class SetShop extends SubCommand {
 

@@ -1,6 +1,4 @@
-package com.andrei1058.bedwars.api.util;
 
-import com.andrei1058.bedwars.api.server.VersionSupport;
 
 import java.io.File;
 import java.io.FileInputStream;

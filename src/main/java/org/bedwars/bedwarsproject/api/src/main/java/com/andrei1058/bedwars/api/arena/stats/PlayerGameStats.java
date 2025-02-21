@@ -1,4 +1,5 @@
-package com.andrei1058.bedwars.api.arena.stats;
+// Compare this snippet from IShopItem.java:
+// /*
 
 import org.jetbrains.annotations.NotNull;
 

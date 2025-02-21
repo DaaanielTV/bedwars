@@ -1,0 +1,6 @@
+name: Bedwars Project
+version: '1.21.4'
+main: org.bedwars.BedwarsProject
+api-version: 1.21.4
+authors: DaaanielTV
+description: Bedwars Plugin

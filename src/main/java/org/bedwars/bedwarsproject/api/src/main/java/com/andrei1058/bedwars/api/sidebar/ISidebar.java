@@ -1,9 +1,4 @@
-package com.andrei1058.bedwars.api.sidebar;
 
-import com.andrei1058.bedwars.api.arena.IArena;
-import com.andrei1058.spigot.sidebar.PlaceholderProvider;
-import com.andrei1058.spigot.sidebar.Sidebar;
-import com.andrei1058.spigot.sidebar.SidebarLine;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;

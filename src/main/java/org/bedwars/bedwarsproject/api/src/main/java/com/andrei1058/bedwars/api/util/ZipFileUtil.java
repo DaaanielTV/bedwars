@@ -1,4 +1,4 @@
-package com.andrei1058.bedwars.api.util;
+
 
 import java.io.*;
 import java.util.Enumeration;

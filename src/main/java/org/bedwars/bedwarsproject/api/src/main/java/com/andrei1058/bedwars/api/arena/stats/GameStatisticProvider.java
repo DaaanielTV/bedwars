@@ -1,6 +1,4 @@
-package com.andrei1058.bedwars.api.arena.stats;
 
-import com.andrei1058.bedwars.api.language.Language;
 import org.bukkit.plugin.Plugin;
 import org.jetbrains.annotations.Nullable;
 

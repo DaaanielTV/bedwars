@@ -18,7 +18,6 @@
  * Contact e-mail: andrew.dascalu@gmail.com
  */
 
-package com.andrei1058.bedwars.api.arena.shop;
 
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;

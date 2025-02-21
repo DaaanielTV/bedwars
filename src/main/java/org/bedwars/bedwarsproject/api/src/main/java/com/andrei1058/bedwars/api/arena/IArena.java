@@ -18,18 +18,7 @@
  * Contact e-mail: andrew.dascalu@gmail.com
  */
 
-package com.andrei1058.bedwars.api.arena;
 
-import com.andrei1058.bedwars.api.arena.generator.IGenerator;
-import com.andrei1058.bedwars.api.arena.stats.GameStatsHolder;
-import com.andrei1058.bedwars.api.arena.team.ITeam;
-import com.andrei1058.bedwars.api.arena.team.ITeamAssigner;
-import com.andrei1058.bedwars.api.configuration.ConfigManager;
-import com.andrei1058.bedwars.api.language.Language;
-import com.andrei1058.bedwars.api.region.Region;
-import com.andrei1058.bedwars.api.tasks.PlayingTask;
-import com.andrei1058.bedwars.api.tasks.RestartingTask;
-import com.andrei1058.bedwars.api.tasks.StartingTask;
 import org.bukkit.Location;
 import org.bukkit.World;
 import org.bukkit.block.Block;

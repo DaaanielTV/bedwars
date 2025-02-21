@@ -18,12 +18,6 @@
  * Contact e-mail: andrew.dascalu@gmail.com
  */
 
-package com.andrei1058.bedwars.api.arena.team;
-
-import com.andrei1058.bedwars.api.arena.IArena;
-import com.andrei1058.bedwars.api.arena.generator.IGenerator;
-import com.andrei1058.bedwars.api.language.Language;
-import com.andrei1058.bedwars.api.upgrades.EnemyBaseEnterTrap;
 import org.bukkit.Location;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;

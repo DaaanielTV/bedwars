@@ -1,6 +1,4 @@
-package com.andrei1058.bedwars.api.sidebar;
 
-import com.andrei1058.bedwars.api.arena.IArena;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;

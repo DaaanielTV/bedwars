@@ -1,4 +1,4 @@
-package com.andrei1058.bedwars.api.util;
+
 
 import org.bukkit.World;
 import org.bukkit.block.Block;

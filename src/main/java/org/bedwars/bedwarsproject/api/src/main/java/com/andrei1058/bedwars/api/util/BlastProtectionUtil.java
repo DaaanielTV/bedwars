@@ -1,9 +1,4 @@
-package com.andrei1058.bedwars.api.util;
 
-import com.andrei1058.bedwars.api.BedWars;
-import com.andrei1058.bedwars.api.arena.IArena;
-import com.andrei1058.bedwars.api.configuration.ConfigPath;
-import com.andrei1058.bedwars.api.server.VersionSupport;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.block.Block;

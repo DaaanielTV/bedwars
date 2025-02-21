@@ -18,7 +18,7 @@
  * Contact e-mail: andrew.dascalu@gmail.com
  */
 
-package com.andrei1058.bedwars.api.arena.generator;
+
 
 import org.bukkit.entity.Player;
 
