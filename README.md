@@ -1,12 +1,3 @@
-![Logo](./.github/assets/logo_open_source.png)
-
-
-Build on top of Bedwars 1058
-
-
-As from November 1st 2021 BedWars1058 by Andrei Dascălu becomes open source under GNU GPL 3.0 license. If you are a developer I would really appreciate if you'd come with pull requests instead of making hundreds of forks. Let's make updates available for everyone!
-
-
 # Description
 BedWars is a mini-game where you have to defend your bed and destroy the others.  
 Once your bed is destroyed, you cannot respawn.
@@ -26,10 +17,6 @@ and faster restore system we recommend using one of the following solutions:
 
 BedWars1058 will hook into it and do everything for you, no additional configuration is needed.
 
-# Pre-made setups and community add-ons
-
-You can find a list of pre-made server setups and a lot of community add-ons [on BedWars1058 Wiki](https://wiki.andrei1058.dev/docs/BedWars1058/addons).
-
 # Main features
 
 ###### Flexible | Ways you can run the plugin:
@@ -42,7 +29,6 @@ You can find a list of pre-made server setups and a lot of community add-ons [on
 - each player can receive messages, holograms, GUIs etc. in their desired language. /bw lang.
 - you can either remove or add new languages.
 - team names, group names, shop contents and a lot more can be translated in your languages.
-- custom titles and subtitles for [starting countdown](https://gitlab.com/andrei1058/BedWars1058/-/wikis/language-configuration#custom-title-sub-title-for-arena-countdown).
 
 ###### Lobby removal | Optional:
 The waiting-lobby inside the map can be removed once the game starts.
@@ -123,87 +109,4 @@ If you get disconnected, or if you leave a game (configurable) you can re-join i
 - Halloween special. It is enabled automatically based on your machine timezone and will provide cool effects.
 
 # Contributing
-Any help is appreciated, just give a quick look at [CONTRIBUTING.md](https://github.com/andrei1058/BedWars1058/blob/master/CONTRIBUTING.md) first!
-
-If you are not a programmer you can help answering people in the [Issues](https://github.com/andrei1058/BedWars1058/issues) section or even [translate the plugin in your languae on Crowdin](https://crowdin.com/project/bedwars1058).
-
-### Translation progress
-[Translation Chart](https://badges.awesome-crowdin.com/translation-12780139-594479.png)
-
-# 3rd party libraries
-- [bStats](https://bstats.org/getting-started/include-metrics)
-- [SidebarLib](https://github.com/andrei1058/SiderbarLib)
-- [Commons IO](https://mvnrepository.com/artifact/commons-io/commons-io)
-- [HikariCP](https://mvnrepository.com/artifact/com.zaxxer/HikariCP)
-- [SLF4J](http://www.slf4j.org/)
-
-
-new features:
-
-package com.andrei1058.bedwars;
-
-import org.bukkit.Bukkit;
-import org.bukkit.boss.BossBar;
-import org.bukkit.boss.BarColor;
-import org.bukkit.boss.BarStyle;
-import org.bukkit.entity.Player;
-import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.scheduler.BukkitRunnable;
-
-import java.util.HashMap;
-import java.util.Map;
-import java.util.UUID;
-
-public class ScoreboardBossBarUpdater {
-
-    private static BossBar bossBar;
-    private static final Map<UUID, Boolean> playersViewing = new HashMap<>();
-
-    /**
-     * Call this method to initialize and start boss bar updates.
-     * It will update the boss bar title every second with the current top player info.
-     *
-     * @param plugin your plugin instance.
-     */
-    public static void init(JavaPlugin plugin) {
-        bossBar = Bukkit.createBossBar("Top Player: N/A", BarColor.BLUE, BarStyle.SOLID);
-        
-        new BukkitRunnable() {
-            @Override
-            public void run() {
-                // Retrieve updated top player info from your scoreboard mechanism
-                String topPlayerInfo = getTopPlayerInfo();
-                bossBar.setTitle("Top Player: " + topPlayerInfo);
-
-                // Ensure every online player can see the boss bar
-                for (Player player : Bukkit.getOnlinePlayers()) {
-                    if (!bossBar.getPlayers().contains(player)) {
-                        bossBar.addPlayer(player);
-                        playersViewing.put(player.getUniqueId(), true);
-                    }
-                }
-            }
-        }.runTaskTimer(plugin, 0L, 20L); // update every second (20 ticks)
-    }
-
-    /**
-     * Stub method to get current top player information.
-     * Replace this with logic that returns your dynamic top player value.
-     *
-     * @return a formatted string representing the top player and their stats.
-     */
-    private static String getTopPlayerInfo() {
-        // TODO: Replace with your scoreboard/logic to retrieve the top player info.
-        return "PlayerXYZ - 100 Kills";
-    }
-
-    /**
-     * Use this to remove the boss bar from a player (for example, when they disconnect).
-     *
-     * @param player the player to remove from the boss bar.
-     */
-    public static void removeBossBarForPlayer(Player player) {
-        bossBar.removePlayer(player);
-        playersViewing.remove(player.getUniqueId());
-    }
-}
+Any help is appreciated, just give a quick look at first!.
