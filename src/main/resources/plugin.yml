@@ -1,6 +1,6 @@
 name: Bedwars Project
 version: '1.21.4'
-main: org.bedwars.BedwarsProject
+main: org.bedwars.bedwarsproject.BedwarsProject
 api-version: 1.21.4
-authors: DaaanielTV
+authors: [DaaanielTV]
 description: Bedwars Plugin

@@ -1,26 +1,35 @@
-package org.bedwars.bedwarsproject;
+// bedwars/src/main/java/org/bedwars/bedwarsproject/game/GameManager.java
+package org.bedwars.bedwarsproject.game;
+
+import org.bedwars.bedwarsproject.game.events.EventManager; // New dependency
+import org.bukkit.World;
+import org.bukkit.plugin.Plugin; // Your main plugin class
 
 public class GameManager {
+    private EventManager eventManager; // New dependency
+    private final Plugin plugin; // Reference to your main plugin instance
+    private final World gameWorld; // The world where the game is played
 
-    private final GameLogic gameLogic;
-
-    public GameManager() {
-        this.gameLogic = new GameLogic();
+    public GameManager(Plugin plugin, World gameWorld) { // Pass plugin and world to constructor
+        this.plugin = plugin;
+        this.gameWorld = gameWorld;
+        // ... other initializations
     }
 
-    public void startGame() {
-        // Logic to start a new Bedwars game
-        System.out.println("Game started!");
-        gameLogic.manageGameplay();
+    // Call this when the game starts
+    public void onGameStart() {
+        // ... existing game start logic ...
+        this.eventManager = new EventManager(plugin, gameWorld);
+        this.eventManager.startGameEvents();
     }
 
-    public void stopGame() {
-        // Logic to stop the current Bedwars game
-        System.out.println("Game stopped!");
+    // Call this when the game ends
+    public void onGameEnd() {
+        // ... existing game end logic ...
+        if (this.eventManager != null) {
+            this.eventManager.stopGameEvents();
+        }
     }
 
-    public void manageGameState() {
-        // Logic to manage the ongoing game state
-        System.out.println("Managing game state...");
-    }
+    // ... other existing game management methods
 }
